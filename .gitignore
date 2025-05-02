@@ -1,0 +1,14 @@
+target/
+.idea/
+*.iml
+.vscode/
+*.class
+*.jar
+*.war
+*.ear
+*.logs
+.DS_Store
+*.swp
+
+# Docker
+deployments/

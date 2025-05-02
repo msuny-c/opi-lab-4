@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html">
+
+	<h:head>
+		<title>Веб-программирование</title>
+		<h:outputScript name="clock.js"></h:outputScript>
+	</h:head>
+	<h:body>
+		<h:outputStylesheet name="styles.css" />
+		<header>
+			<span class="logo">веб-программирование</span>
+			<span class="creator-name">Байрамгулов Мунир Ниязович, P3218</span>
+		</header>
+		<div class="content">
+			<p class="clock" id="clock-time"></p>
+			<h3 class="clock-date" id="clock-date"></h3>
+			<div class="start-panel">
+				<h:button
+					type="button"
+					id="start-button"
+					class="round confirm-colors material-icons"
+					outcome="toMain"
+					value="перейти в приложение"
+				/>
+			</div>
+		</div>
+	</h:body>
+</html>

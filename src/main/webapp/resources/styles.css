@@ -1,0 +1,285 @@
+body {
+	font: normal 18px / 1.14 'Styrene B LC', 'Helvetica Neue', arial, serif;
+}
+
+header {
+	box-sizing: border-box;
+	text-align: center;
+	overflow: hidden;
+	color: #2c4942;
+	width: 100%;
+	background-color: #ffffff;
+	position: sticky;
+	top: 0;
+	padding: 20px;
+	margin-bottom: 40px;
+}
+
+.logo {
+	font-weight: bold;
+	background-color: #d2dcdc;
+	width: 250px;
+	float: left;
+	color: black;
+}
+
+.creator-name {
+	float: right;
+}
+
+.variant {
+	display: inline-block;
+	border-bottom: 5px solid rgba(0, 218, 114, 0.5);
+	line-height: 0.1em;
+}
+
+table thead tr {
+	background-color: #d2dcdc;
+	color: #2c4942;
+	text-align: left;
+}
+
+table th,
+table td {
+	font-weight: normal;
+	text-align: center;
+	padding: 10px 12px;
+}
+
+table tbody tr {
+	border-bottom: 1px solid #dddddd;
+}
+
+table tbody tr:nth-of-type(even) {
+	background-color: #f3f3f3;
+}
+
+table tbody tr:last-of-type {
+	border-bottom: 3px solid #00da72;
+}
+
+.coordinates-form {
+	color: #ffffff;
+	padding: 80px 50px;
+	padding-top: 30px;
+	padding-bottom: 40px;
+	background-color: #00da72;
+	text-align: center;
+	margin-right: 80px;
+}
+
+.container {
+	display: flex;
+	/* justify-content: center;
+    width: 100%; */
+}
+.graph {
+	margin-left: 50px;
+}
+
+.shadow {
+	box-shadow: 0 -6px 10px 5px rgba(0, 0, 0, 0.08);
+}
+
+svg text,
+.radio-inputs .radio .name {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+.content {
+	padding: 20px;
+	text-align: center;
+}
+
+body .ui-inputfield {
+	background: transparent;
+	border: none;
+	border-radius: 0px;
+	border-bottom: 1px solid white;
+	font-size: 16px;
+	height: 40px;
+	line-height: 24px;
+	padding: 7px 8px;
+	color: #ffffff;
+	box-shadow: none;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+body .ui-inputfield.ui-state-hover,
+body .ui-inputfield.ui-state-focus {
+	border-color: white;
+	box-shadow: none;
+}
+
+.r-input {
+	margin-top: 25px;
+}
+
+body .ui-slider .ui-slider-handle {
+	border-color: white;
+}
+
+body .ui-slider .ui-slider-handle.ui-state-hover {
+	background-color: white;
+	border-color: white;
+}
+
+body .ui-slider {
+	background-color: white;
+}
+
+body .ui-button {
+	padding: 5px 16px;
+	box-sizing: border-box;
+	border: none;
+	border-radius: 0px;
+	background-color: #ffffff;
+	color: #2c4942;
+	cursor: pointer;
+	font: normal 18px / 1.14 'Styrene B LC', 'Helvetica Neue', arial, sans-serif;
+	transition: color 0.3s, background 0.3s, opacity 0.3s, border-color 0.3s;
+	width: 100%;
+}
+
+.submit-button-container {
+	margin-top: 30px;
+}
+
+body .ui-spinner .ui-spinner-button.ui-button.ui-spinner-up,
+body .ui-spinner .ui-spinner-button.ui-button.ui-spinner-down {
+	border-radius: 0px;
+}
+
+body .ui-button.ui-state-hover,
+body .ui-button.ui-state-active {
+	background-color: #d2dcdc;
+	color: #2c4942;
+	box-shadow: none;
+}
+body .ui-button.ui-state-focus {
+	box-shadow: none;
+}
+
+#start-button {
+	all: unset;
+	margin-top: 30px;
+	padding: 10px 16px 12px;
+	width: 230px;
+	box-sizing: border-box;
+	border: none;
+	background-color: #d2dcdc;
+	color: #2c4942;
+	cursor: pointer;
+	font: normal 18px / 1.14 'Styrene B LC', 'Helvetica Neue', arial, sans-serif;
+	transition: color 0.3s, background 0.3s, opacity 0.3s, border-color 0.3s;
+}
+
+#start-button:hover {
+	background-color: #2c4942;
+	color: #d2dcdc;
+}
+
+/* Переопределение стилей таблицы */
+body .ui-datatable .ui-datatable-data > tr:nth-of-type(even) {
+	background-color: #f3f3f3;
+}
+
+body .ui-datatable .ui-datatable-data > tr:last-of-type {
+	border-bottom: 3px solid #00da72;
+}
+
+.ui-datatable table {
+	border-collapse: collapse;
+}
+
+body .ui-datatable thead th {
+	text-align: center;
+	vertical-align: middle;
+	padding: 0.7rem 1rem;
+}
+
+table thead tr,
+body .ui-datatable thead th {
+	background-color: #d2dcdc;
+}
+
+.ui-datatable-data td[role='gridcell']:focus,
+.ui-datatable-data td[role='grid'] [tabindex='0']:focus {
+	outline: none;
+}
+
+body .ui-datatable thead th .ui-column-title {
+	font-weight: normal;
+}
+
+/* Контейнер всего содержимого */
+
+.content-container {
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0 auto;
+	width: 50%;
+}
+
+/* Стили для текста о попадании */
+
+.success-attempt {
+	background-color: rgb(0, 218, 114);
+	color: #ffffff;
+}
+
+.fail-attempt {
+	background-color: red;
+	color: #ffffff;
+}
+
+body .ui-widget {
+	font: normal 18px / 1.14 'Styrene B LC', 'Helvetica Neue', arial, sans-serif;
+}
+
+.table-container {
+	margin-top: 20px;
+}
+
+/* Часы */
+
+#clock-time, #clock-date {
+	color: #2c4942;
+	font-size: 26px;
+}
+
+.none {
+	display: none;
+}
+
+.error-message {
+	color: white;
+	text-align: center;
+}
+
+.error-messages {
+	margin-top: 20px;
+}
+
+.error {
+	background-color: #ff2c00;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 100%;
+}
+
+body .ui-selectonemenu {
+	border-radius: 0px;
+	border: none;
+	margin-top: 20px;
+}
+
+body .ui-selectonemenu .ui-selectonemenu-label {
+	color: #2c4942;
+}
