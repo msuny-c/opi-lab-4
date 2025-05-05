@@ -49,16 +49,16 @@ public class PointStatisticsMBean extends NotificationBroadcasterSupport
         } else {
             consecutiveMisses++;
             
-            if (consecutiveMisses == 4) {
+            if (consecutiveMisses > 0 && consecutiveMisses % 4 == 0) {
                 Notification notification = new Notification(
                     "ConsecutiveMisses",
                     this.getClass().getName(),
                     sequenceNumber++,
                     System.currentTimeMillis(),
-                    "Reached 4 consecutive misses"
+                    "Reached " + consecutiveMisses + " consecutive misses"
                 );
                 
-                notification.setUserData("Number of consecutive misses: 4");
+                notification.setUserData("Number of consecutive misses: " + consecutiveMisses);
                 
                 sendNotification(notification);
             }
@@ -72,7 +72,7 @@ public class PointStatisticsMBean extends NotificationBroadcasterSupport
         };
         
         String name = Notification.class.getName();
-        String description = "Notification about reaching 4 consecutive misses";
+        String description = "Notification about consecutive misses";
         MBeanNotificationInfo info = new MBeanNotificationInfo(
             types, name, description
         );
