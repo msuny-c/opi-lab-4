@@ -11,6 +11,7 @@ import ru.itmo.app.checker.IAreaChecker;
 import ru.itmo.app.entity.AntEntity;
 import ru.itmo.app.entity.AttemptEntity;
 import ru.itmo.app.entity.SpiderEntity;
+import ru.itmo.app.mbean.ClickIntervalMBean;
 import ru.itmo.app.mbean.PointStatisticsMBean;
 import ru.itmo.app.repository.IAttemptRepository;
 
@@ -20,6 +21,7 @@ public class AttemptService implements IAttemptService {
     @Inject private IAttemptRepository repository;
     @Inject private IAreaChecker checker;
     @Inject private PointStatisticsMBean pointStatistics;
+    @Inject private ClickIntervalMBean clickInterval;
     
     @Override
     public void save(AttemptBackingBean attempt) {
@@ -36,8 +38,8 @@ public class AttemptService implements IAttemptService {
         entity.setSuccess(success);
         repository.save(entity);
         
-        // Update MBean statistics
         pointStatistics.addPoint(attempt.getX(), attempt.getY(), attempt.getR(), success);
+        clickInterval.registerClick();
     }
     
     @Override

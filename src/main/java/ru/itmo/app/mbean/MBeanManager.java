@@ -19,23 +19,21 @@ public class MBeanManager {
     private PointStatisticsMBean pointStatisticsMBean;
     
     @Inject
-    private AreaCalculatorMBean areaCalculatorMBean;
+    private ClickIntervalMBean clickIntervalMBean;
     
     private ObjectName pointStatisticsName;
-    private ObjectName areaCalculatorName;
+    private ObjectName clickIntervalName;
     
     @PostConstruct
     public void registerMBeans() {
         try {
             MBeanServer mBeanServer = ManagementFactory.getPlatformMBeanServer();
             
-            // Register PointStatisticsMBean
             pointStatisticsName = new ObjectName("ru.itmo.app.mbean:type=PointStatistics");
             mBeanServer.registerMBean(pointStatisticsMBean, pointStatisticsName);
             
-            // Register AreaCalculatorMBean
-            areaCalculatorName = new ObjectName("ru.itmo.app.mbean:type=AreaCalculator");
-            mBeanServer.registerMBean(areaCalculatorMBean, areaCalculatorName);
+            clickIntervalName = new ObjectName("ru.itmo.app.mbean:type=ClickInterval");
+            mBeanServer.registerMBean(clickIntervalMBean, clickIntervalName);
             
             System.out.println("MBeans registered successfully");
         } catch (Exception e) {
@@ -49,12 +47,11 @@ public class MBeanManager {
         try {
             MBeanServer mBeanServer = ManagementFactory.getPlatformMBeanServer();
             
-            // Unregister MBeans
             if (pointStatisticsName != null) {
                 mBeanServer.unregisterMBean(pointStatisticsName);
             }
-            if (areaCalculatorName != null) {
-                mBeanServer.unregisterMBean(areaCalculatorName);
+            if (clickIntervalName != null) {
+                mBeanServer.unregisterMBean(clickIntervalName);
             }
             
             System.out.println("MBeans unregistered successfully");
